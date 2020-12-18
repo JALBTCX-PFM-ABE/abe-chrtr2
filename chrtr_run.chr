@@ -1,0 +1,25 @@
+chrtr << END_OF_CHRTR_SCRIPT
+gridmin           =   0.015000
+delta             =   0.050000
+reg_multfact      =   4
+search_radius     =   20.000000
+error_control     =   20
+border_points     =   0
+weight_factor     =   3
+output_reg        =   0
+minvalue          =   -999999.000000
+maxvalue          =   999999.000000
+prnt_option       =   1
+latdeg_south      =   41.000000
+latmin_south      =   6.000000
+latdeg_north      =   41.000000
+latmin_north      =   15.000000
+londeg_west       =   19.000000
+lonmin_west       =   18.000000
+londeg_east       =   19.000000
+lonmin_east       =   31.500000
+end
+01x_shoal.fin
+/hihp01usr4/albania/area/01x/SHOALEST.EXT
+eof
+END_OF_CHRTR_SCRIPT

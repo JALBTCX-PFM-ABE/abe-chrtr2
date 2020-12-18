@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <errno.h>
+
+int reader (float *lon, float *lat, float *z, int prime_meridian)
+{
+    char        string[132];
+    FILE        *fp;
+    static int  first = 1;
+
+    if (first)
+    {
+        fp = fopen ("nref.vct", "r");
+        first = 0;
+    }
+
+    if (fgets (string, sizeof (string), fp) == NULL) return (1);
+    sscanf (string, "%f %f %f", lon, lat, z);
+
+    *lon *= 60.0;
+    *lat *= 60.0;
+
+    if (prime_meridian) *lon += 21600.0;
+
+    return (0);
+}
